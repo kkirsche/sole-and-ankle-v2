@@ -4,6 +4,17 @@ import { COLORS, WEIGHTS } from '../../constants';
 import { formatPrice, isNewShoe, pluralize } from '../../utils';
 import Spacer from '../Spacer';
 
+const Flag = styled.span`
+  position: absolute;
+  top: 12px;
+  right: 0;
+  margin-right: -5px;
+  background-color: ${(props) => props.variant === "on-sale" ? COLORS.primary : COLORS.secondary };
+  padding: 8px;
+  color: ${COLORS.white}
+
+`;
+
 const ShoeCard = ({
   slug,
   name,
@@ -35,6 +46,7 @@ const ShoeCard = ({
       <Wrapper>
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
+          {variant !== "default" ? <Flag variant={variant}>{variant === "on-sale" ? "Sale" : "Just Released!"}</Flag> : null}
         </ImageWrapper>
         <Spacer size={12} />
         <Row>
