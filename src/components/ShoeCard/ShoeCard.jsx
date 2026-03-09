@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 
 import { COLORS, WEIGHTS } from '../../constants';
-import { formatPrice, pluralize, isNewShoe } from '../../utils';
+import { formatPrice, isNewShoe, pluralize } from '../../utils';
 import Spacer from '../Spacer';
 
 const ShoeCard = ({
@@ -55,13 +54,18 @@ const Link = styled.a`
   color: inherit;
 `;
 
-const Wrapper = styled.article``;
+const Wrapper = styled.article`
+max-width: 344px;
+`;
 
 const ImageWrapper = styled.div`
   position: relative;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  border-radius: 16px 16px 4px 4px;
+  width: 100%;
+`;
 
 const Row = styled.div`
   font-size: 1rem;
