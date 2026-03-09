@@ -13,6 +13,7 @@ const Flag = styled.span`
     props.variant === "on-sale" ? COLORS.primary : COLORS.secondary};
   padding: 8px;
   color: ${COLORS.white};
+  border-radius: 4px;
 `;
 
 const ShoeCard = ({
